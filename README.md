@@ -8,6 +8,18 @@ namespace: retinex
 
 functions: MSRCP, MSRCR
 
+## Installation
+
+Prebuilt wheels for Windows x64, Linux x86_64 and macOS arm64 are attached to each [GitHub release](../../releases).
+They are meant for the pip-installed `VapourSynth` package:
+
+```
+pip install vapoursynth_retinex-<version>-py3-none-<platform>.whl
+```
+
+The plugin is installed into `site-packages/vapoursynth/plugins`, which VapourSynth autoloads.
+For other VapourSynth installs (installer, system package), copy the library from the wheel into your plugin folder manually.
+
 ## About Retinex
 
 The Retinex theory and algorithm mainly aims at simulating the color constancy feature of HVS(Human Visual System).
