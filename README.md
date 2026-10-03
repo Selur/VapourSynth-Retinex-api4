@@ -11,16 +11,14 @@ functions: MSRCP, MSRCR
 ## Installation
 
 Prebuilt wheels for Windows x64, Linux x86_64 and macOS arm64 are attached to each [GitHub release](../../releases).
+They are meant for the pip-installed `VapourSynth` package:
 
 ```
 pip install vapoursynth_retinex-<version>-py3-none-<platform>.whl
-vs-retinex-install
 ```
 
-`vs-retinex-install` copies the plugin into the per-user VapourSynth autoload directory
-(`%APPDATA%\VapourSynth\plugins64`, `~/.config/vapoursynth/plugins` or
-`~/Library/Application Support/VapourSynth/plugins`), so it is loaded automatically.
-Use `--dir <path>` to choose another directory and `vs-retinex-install uninstall` to remove it.
+The plugin is installed into `site-packages/vapoursynth/plugins`, which VapourSynth autoloads.
+For other VapourSynth installs (installer, system package), copy the library from the wheel into your plugin folder manually.
 
 ## About Retinex
 

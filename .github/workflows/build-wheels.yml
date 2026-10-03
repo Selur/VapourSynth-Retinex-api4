@@ -32,10 +32,7 @@ jobs:
           CIBW_MANYLINUX_X86_64_IMAGE: manylinux_2_28
           MACOSX_DEPLOYMENT_TARGET: '11.0'
           CIBW_REPAIR_WHEEL_COMMAND_MACOS: ''
-          CIBW_TEST_COMMAND: >-
-            python -c "import vapoursynth_retinex as r, tempfile;
-            d = tempfile.mkdtemp(); p = r.install(d);
-            assert p.is_file() and p.stat().st_size > 0, p; print(p)"
+          CIBW_TEST_COMMAND: python -c "from vapoursynth import core; core.retinex.MSRCP"
 
       - name: Re-tag wheel as Python-independent
         shell: bash

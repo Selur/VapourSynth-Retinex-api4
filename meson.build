@@ -28,10 +28,9 @@ endif
 suffix = host_machine.system() == 'darwin' ? 'dylib' : []
 
 if get_option('python_package')
+  # Same layout as the VapourSynth PyPI package autoloads from: site-packages/vapoursynth/plugins
   py = import('python').find_installation(pure : false)
-  install_dir = join_paths(py.get_install_dir(), 'vapoursynth_retinex')
-  py.install_sources('python/vapoursynth_retinex/__init__.py', 'python/vapoursynth_retinex/__main__.py',
-    subdir : 'vapoursynth_retinex', pure : false)
+  install_dir = join_paths(py.get_install_dir(), 'vapoursynth', 'plugins')
 else
   libdir = join_paths(get_option('prefix'), get_option('libdir'))
   if system_vs_dep.found()

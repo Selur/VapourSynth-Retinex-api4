@@ -9,9 +9,10 @@ description = 'Retinex (MSRCP/MSRCR) plugin for VapourSynth (API 4)'
 readme = 'README.md'
 requires-python = '>=3.8'
 license = { file = 'LICENSE' }
-
-[project.scripts]
-vs-retinex-install = 'vapoursynth_retinex.__main__:main'
+dependencies = ['VapourSynth']
 
 [tool.meson-python.args]
 setup = ['-Dpython_package=true']
+
+[tool.meson-python.wheel]
+exclude = ['*/*.dll.a', '*/*.lib']
