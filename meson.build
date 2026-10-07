@@ -1,7 +1,7 @@
 project('Retinex', 'cpp',
   default_options : ['buildtype=release', 'b_ndebug=if-release', 'cpp_std=c++14'],
   meson_version : '>=0.51.0',
-  version : '5.1'
+  version : '5.2'
 )
 
 sources = [
